@@ -1,0 +1,16 @@
+proc web_startup
+{
+//connect to DB using data source
+dbms engine odbc
+dbms declare odbc_conn connection for datasource "NoOpCommerce" \
+user 'shlomo' password 'GemPeach1985$'
+call sm_web_log_error "Connected to NoOpCommerce"
+call sm_trace("ALL websocket=default")
+msg emsg "IN TRACE"
+
+}
+//proc for closing the web DB connection
+proc  web_shutdown
+{
+dbms close_all_connections
+}

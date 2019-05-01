@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="loginform_new.css" rel="stylesheet" type="text/css"/>
+<link href="Customers.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<BODY>
+<FORM>	
+	{{form:tag}} 
+	{{form:info}} 
+	
+	<div id="header">
+		<h1 id="title">VENDORS (customers)</h1>
+	</div>	
+	<div class="page">
+		<div id="vo_page">
+		<div id="vo_gopb" style="display:none;">{{emit:go}}</div>
+		<div id="vieworders-form">
+			<label class="vo-label-title">Customers</label><br><br>
+			<div class="control-group" id="view-order-table" style="margin-top:20px;">{{emit:Master}}</div>
+		</div>	
+		</div>
+	</div>			
+	<div id="footer">
+		<p>Copyright @ www.prolifics.com.</p>
+	</div>
+{{form:script}}
+</FORM>
+</BODY>
+</HTML>
+

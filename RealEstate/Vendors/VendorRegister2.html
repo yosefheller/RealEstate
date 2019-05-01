@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="Vendors.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<BODY>
+	
+	{{form:tag}} 
+	{{form:info}} 
+	{{form:messages}} <!--Displays messages if we use msg emsg in screen -->
+	<div id="header">
+		<h1 id="title">Vendor Registration #2</h1>
+	</div>	
+	<div class="page">
+		<div id="main">
+		      <div id="vendors-page">
+		       	<div class="vendors-form">
+				   <ul>
+
+                       <li>
+                           <label for="Email">Email Address</label>
+                           {{emit:email}}
+
+                           <span>Enter your email adddres here</span>
+					   </li>
+
+				   
+                       <li>
+                           <label for="name">Username</label>
+                           {{emit:username}}
+                           <span>Enter your username here</span>
+					   </li>
+					   
+                       <li>
+                           <label for="password">Password</label>
+                           {{emit:password}}
+                           <span>Enter a valid password</span>
+                       </li>
+						<li>
+							<div id="outer">
+	  							<div id="savebtn" class="outer"><div id="save" title="Click here to create your account">{{emit:savepb}}</div></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<p>Please enter your username and password to create your account</p>
+				</div>		
+			</div>
+		</div>
+		<div align="center">
+		</div>
+	</div>			
+	<div id="footer">
+		<p>Copyright @ www.prolifics.com.</p>
+	</div>
+{{form:script}}
+	</FORM>
+</BODY>
+</HTML>
+
+

@@ -1,0 +1,58 @@
+//Invoke aJava method toString() which converts the Date Object to a string
+@app()->current_component_system = PV_SERVER_JAVA
+vars date_id = sm_obj_create("java.util.Date")
+javadate = sm_obj_call(date_id, "toString")
+call sm_obj_delete_id(date_id)
+
+ proc validate_login
+ //Validates that user and password fields
+ {
+ vars tnum
+ if (usernametxt=="" || passwordtxt=="")
+ {
+  msg emsg"Please enter username and password..."
+ }
+else
+ {
+	call connect()
+	dbms begin
+	dbms alias troopnum tnum
+	dbms sql select troopnum from troop where troopemail =:+usernametxt
+	dbms alias
+	dbms commit
+	send bundle "troopbundle" data tnum
+	
+	//Check for an existing user in database.Usernametxt and passwordtxt are field names
+	vars match	
+	dbms begin
+	dbms alias match
+	dbms sql select count(*) from troop where troopemail = :+usernametxt and password =:+passwordtxt
+	dbms alias
+	dbms commit
+	if (match == 0)
+	{
+		msg emsg "Invalid Username/Password "
+			}
+	else
+	{
+		msg emsg "Welcome :usernametxt"
+		call sm_jform("scoutorders")
+	}
+	}
+}
+  proc connect()
+ {
+ //Database connection in  a Client/Server env
+ dbms engine odbc
+ dbms close_all_connections()
+ dbms declare odbc_conn connection for datasource "CookieDS" user 'pantherjam' password 'pantherjam'
+  }
+  
+  
+ proc reset
+ {
+ //Clears data in fields
+    usernametxt=""
+ 	passwordtxt=""
+ 
+ }

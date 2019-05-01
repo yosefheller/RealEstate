@@ -1,0 +1,239 @@
+#vendors-page {
+    padding: 20px;
+    background-color: white;
+    margin: 15px auto;
+    width: 500px; /*Update to 300px  for narrow box*/
+    font-size: 18px;  
+    box-shadow:  0px 0px 8px 5px rgba(0, 0, 0, .4);
+    min-height: 100px;
+}
+.vendors-form {
+    max-width:400px;
+    margin:auto;
+    background:#fff;
+    padding:20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+.vendors-form h1{
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0px 0px 20px 0px;
+    color: #5C5C5C;
+    font-size:x-large;
+}
+.vendors-form ul{
+    list-style:none;
+    padding:0;
+    margin:0;  
+}
+.vendors-form li{
+    display: block;
+    padding: 9px;
+    border:1px solid #DDDDDD;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+.vendors-form li:last-child{
+    border:none;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.vendors-form li > label{
+    display: block;
+    float: left;
+    margin-top: -19px;
+    background: #FFFFFF;
+    height: 14px;
+    padding: 2px 5px 2px 5px;
+    color: #B9B9B9;
+    font-size: 14px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.vendors-form input[type="text"],
+.vendors-form input[type="date"],
+.vendors-form input[type="datetime"],
+.vendors-form input[type="email"],
+.vendors-form input[type="number"],
+.vendors-form input[type="search"],
+.vendors-form input[type="time"],
+.vendors-form input[type="url"],
+.vendors-form input[type="password"],
+.vendors-form textarea,
+.vendors-form select
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    padding: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.vendors-form li > span{
+    background: #F3F3F3;
+    display: block;
+    padding: 3px;
+    margin: 0 -9px -9px -9px;
+    text-align: center;
+    color: #C0C0C0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+.vendors-form textarea{
+    resize:none;
+}
+.vendors-form input[type="submit"],
+.vendors-form input[type="button"]{
+    background: #2471FF;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 3px solid #5994FF;
+    border-radius: 3px;
+    color: #D2E2FF;
+    
+    /*Custom added*/
+    width:100px !important;
+}
+.vendors-form input[type="submit"]:hover,
+.vendors-form input[type="button"]:hover{
+    background: #6B9FFF;
+    color:#fff;
+}
+
+#outer
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;margin:0px;
+}
+
+div#header {
+	top: 0px;
+	left: 0px;
+	height: 60px;
+	margin: 5px;
+	border: thin solid;
+	padding: 5px;
+	zackground-color:#1B68E5;
+	background-color:#0000E5;
+	color:#f2fef5;
+	zolor:#00ff00;
+}
+
+div#footer {
+	clear: both;
+	margin: 5px;
+	border: thin solid;
+	bottom: 0px;
+	right: 0;
+	left: 0;
+	padding: 2rem;
+	background-color:#1B68E5;
+	text-align: center;
+        position:fixed;
+	color:#f2fef5;
+}
+
+div#main {
+	position: relative;
+	left:18%;
+	//float: left;
+	width: 58%;
+	margin: 15px;
+	//margin-right:80px !important;/* Customized from 80 px;*/
+	//border: thin solid; /*Customized from 400px*/
+	padding: 5px;
+	height: 100%;
+}
+
+div#right {
+	position: relative;
+	float: right;
+	width: 15%;
+	margin: 5px;
+	border: thin solid;
+	padding: 5px;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.page {
+	overflow: hidden;
+	margin: 36px auto;
+	width: 90%;
+	//background: lightgray;/*Customized from 400px*/
+}
+
+html {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+body {
+	line-height: 1;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+	height: 100%;
+}
+h2 {
+	font: 600 24px "Futura";
+}
+
+p {
+	font: 16px "Arial", "Helvetica", sans-serif;
+}
+
+h1#title {
+	font: italic small-caps 600 36px/1.5em "Futura";
+	text-align: center;
+}
+
+#view-order-table {
+	height:450px;
+	overflow-y:scroll;
+	margin-bottom:30px;
+}
+
+#view-order-table div input[name="i_1_paidstatus"] {
+	display:none;
+} 
+#view-order-table input[type=text] {
+	width: 100%;
+	font:3px;
+	padding: 2px 5px;
+    	margin:0px;
+    	display: inline-block;
+	border:none;
+    	//border: 1px solid #4787CE;
+    	//border-radius: 2px;
+    	box-sizing: border-box;
+}
