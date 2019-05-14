@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Expenses Demo</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script> -->
+    <!-- charts.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h5>Expenses Demo</h5>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="dashboard">Dashboard</a>
+                </li>
+                <li>
+                    <a href="banking">Banking</a>
+                </li>
+                <li>
+                    <a href="invoicing">Invoicing</a>
+                </li>
+                <li class="active">
+                    <a href="expenses">Expenses</a>
+                </li>
+                <li>
+                    <a href="workers">Workers</a>
+                </li>
+                <li>
+                    <a href="reports">Reports</a>
+                </li>
+                <li>
+                    <a href="taxes">Taxes</a>
+                </li>
+                <li>
+                    <a href="accounting">Accounting</a>
+                </li>
+                <li>
+                    <a href="myAccountant">My Accountant</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-danger">
+                        <i class="fas fa-align-left"></i>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <button class="btn btn-danger d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="row">
+                <div class="col-md-12 col-lg-4  mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Get My Expenses for </h5>
+                            <form>
+                                <div class="form-group ">
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>This Week</option>
+                                        <option>Last Year</option>
+                                        <option>This Year</option>
+                                        <option>Last Month</option>
+                                        <option>This Month</option>
+                                        <option>Last Month</option>
+                                    </select>
+                                </div>
+
+                                <button type="submit" class="btn btn-danger">GO</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-8 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Sales</h5>
+                            <p class="card-text">$1,403,893 Last Month</p>
+                            <canvas id="lineChart1"></canvas>
+                            <script src="lineChart1.js"></script>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="footer">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-danger">
+                        <i class="fas fa-align-left"></i>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <button class="btn btn-danger d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+
+                    </button>
+
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            var includes = $('[data-include]');
+            jQuery.each(includes, function () {
+                var file = 'views/' + $(this).data('include') + '.html';
+                $(this).load(file);
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

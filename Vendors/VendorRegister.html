@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<HTML>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="Vendors.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<BODY>
+
+	{{form:tag}}
+	{{form:info}}
+
+	<!--Displays messages if we use msg emsg in screen -->
+	<div id="header">
+		<h1 id="title">Vendor Registration </h1>
+	</div>
+	<div class="page">
+		<div id="main">
+			<div id="vendors-page">
+				<div>
+					<p>Please enter your username and password to create your account</p>
+				</div>
+				<div class="vendors-form">
+					<ul>
+						<li><label id="fullname" for="FullName">Full Name</label>{{emit:name}}</li>
+						<li><label id="email" for="Email">Email Address</label>{{emit:email}}</li>
+						<li><label for="name">Username</label>{{emit:username}}</li>
+						<li><label for="password">Password</label>{{emit:password}}</li>
+						<li><div id="outer"><div id="savebtn" class="outer">
+									<div id="save" title="Click here to create your account">{{emit:savepb}}</div>
+								</div>
+						</div></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+		<div>
+		</div>
+	</div>
+	<div id="footer">
+		<a class="a-link-normal" target="_blank" href="RealEstate/bcs">
+			business customer service
+		</a>
+		<span class="auth-footer-seperator"></span>
+		<a class="a-link-normal" rel="noopener" href="cou">
+			conditions of use
+		</a>
+		<span class="auth-footer-seperator"></span>
+		<a class="a-link-normal" target="_blank" rel="noopener" href="pp">
+			privacy policy
+		</a>
+
+	</div>
+	{{form:script}}
+	</FORM>
+	<script>
+		document.getElementsByName("i_1_email")[0].addEventListener('focus', (event) => {
+			console.log(event.target)
+			event.target.style.background = 'pink';
+			console.log(document.getElementById("email"))
+			document.getElementById("email").style.borderColor = "lightblue"
+		});
+		function myFunction(x) {
+			x.style.background = "yellow";
+		}
+	</script>
+</BODY>
+
+</HTML>
