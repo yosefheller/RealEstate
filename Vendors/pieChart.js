@@ -7,7 +7,7 @@ var myPieChart = new Chart(ctx, {
         labels: ['Commision Fees', 'Legal...', 'Gifts', 'Evrething Else'],
         datasets: [{
             // labels: 'Expenses',
-            data: [88, 6, 4, 2],
+            data: [88, 16, 14, 8],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

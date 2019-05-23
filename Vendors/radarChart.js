@@ -1,13 +1,13 @@
 
-var ctx = document.getElementById('lineChart1').getContext('2d');
+var ctx = document.getElementById('radarChart').getContext('2d');
 
 var myPieChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'radar',
     data: {
         labels: ['$420K', '$280K', '$140K'],
         datasets: [{
-            label: 'Expenses',
-            data: [188, 66, 666,],
+            // labels: 'Expenses',
+            data: [188, 6, 4,],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -29,12 +29,9 @@ var myPieChart = new Chart(ctx, {
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero: false
+                    beginAtZero: true
                 }
             }]
         }
     }
 });
-
-
-

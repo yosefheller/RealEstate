@@ -5,91 +5,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>Dashboard Damo</title>
-
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
+    <title>Dashboard Demo</title>
+    <link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome JS -->
-    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
-        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
-        crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
-        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
-        crossorigin="anonymous"></script> -->
-    <!-- charts.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 </head>
 
 <body>
+
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
                 <h5>Demo Dashboard</h5>
             </div>
-            <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="dashboard">Dashboard</a>
-                </li>
-                <li>
-                    <a href="banking">Banking</a>
-                </li>
-                <li>
-                    <a href="invoicing">Invoicing</a>
-                </li>
-                <li>
-                    <a href="expenses.html">Expenses</a>
-                </li>
-                <li>
-                    <a href="workers">Workers</a>
-                </li>
-                <li>
-                    <a href="reports">Reports</a>
-                </li>
-                <li>
-                    <a href="taxes">Taxes</a>
-                </li>
-                <li>
-                    <a href="accounting">Accounting</a>
-                </li>
-                <li>
-                    <a href="myAccountant">My Accountant</a>
-                </li>
+            <ul data-include="sidebar1" class="list-unstyled components">
+
             </ul>
         </nav>
 
         <!-- Page Content  -->
         <div id="content">
-            <!-- <nav class="navbar navbar-expand-lg navbar-light ">
-                <ul class="nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                </ul>
-            </nav> -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="btn btn-danger">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success">
                         <i class="fas fa-align-left"></i>
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <button class="btn btn-danger d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="btn btn-success d-inline-block d-lg-none ml-auto" type="button"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-
                     </button>
-
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <h5 id="navtext" class="navbar-text">
+                            Coded by HowToMakeABillion
+                        </h5>
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">Home</a>
@@ -104,15 +55,15 @@
             <div class="row">
                 <div class="col-md-12 col-lg-10">
                     <div class="row">
-                        <div data-include="invoices" class="col-md-12 col-lg-4 mb-4">
+                        <div data-include="pieChart1" class="col-md-12 col-lg-4 mb-4">
                         </div>
-                        <div data-include="pieChart" class="col-md-12 col-lg-4 mb-4">
+                        <div data-include="pieChart1" class="col-md-12 col-lg-4 mb-4">
                         </div>
                         <div data-include="lineChart" class="col-md-12 col-lg-4 mb-4">
                         </div>
                     </div>
                     <div class="row">
-                        <div data-include="invoices1" class="col-md-12 col-lg-4 mb-4">
+                        <div data-include="pieChart1" class="col-md-12 col-lg-4 mb-4">
                         </div>
                         <div data-include="doughnutChart" class="col-md-12 col-lg-4  mb-4">
                         </div>
@@ -138,6 +89,12 @@
 
 
             </div>
+            <!-- <footer class="footer container-fluid">
+                <div class="container">
+                    <span class="text-muted">Place sticky footer content here.</span>
+                </div>
+            </footer> -->
+
         </div>
 
     </div>
@@ -162,12 +119,20 @@
             });
         });
     </script>
-    <script type="text/javascript">
+    <script>
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
             });
         });
+        var li = document.getElementsByTagName("li");
+        var pageURL = window.location.href;
+        var lastURLSegment = pageURL.substr(pageURL.lastIndexOf('/') + 1);
+        Array.from(li).forEach((li) => {
+            if (li.id === lastURLSegment) {
+                li.className = "active"
+            }
+        })
     </script>
 
 

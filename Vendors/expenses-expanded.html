@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <form method=post action="http://18.211.158.173:8080/RealEstate/expenses"
+        onSubmit="__submitting__ = 1;if (typeof document.forms[0].__pushed__ != 'undefined') document.forms[0].__pushed__.value = 0;">
+
+        <input type=hidden name=__posted_screen_name__ value="expenses">
+        <INPUT TYPE=hidden NAME=__screen_name__ VALUE="expenses">
+        <INPUT TYPE=hidden NAME=__http_host__ VALUE="18.211.158.173:8080">
+        <INPUT TYPE=hidden NAME=__end_of_jpl_vars__ VALUE="1">
+        <INPUT TYPE=hidden NAME=zn_xExpense VALUE="6">
+        <INPUT TYPE=hidden NAME=rn_xExpense VALUE="0">
+        <INPUT TYPE=hidden NAME=i_1_xExpense VALUE="545123.77">
+        <INPUT TYPE=hidden NAME=" VALUE=" 213665.89">
+        <INPUT TYPE=hidden NAME=" VALUE=" 52111.17">
+        <INPUT TYPE=hidden NAME=" VALUE=" 13155.67">
+        <INPUT TYPE=hidden NAME=" VALUE=" 4500.12">
+        <INPUT TYPE=hidden NAME=" VALUE=" 3122.333">
+
+        <input type=hidden name=__pushed__ value="">
+        <script type="text/javascript">
+            function winStLn() { self.defaultStatus = ''; }
+            winStLn();
+        </script>
+        <script type="text/javascript">
+        </script>
+
+
+        <div class="mx-auto" id="rangeChoice" style="width: 150px;">
+            <script type="text/javascript">
+                $("#rangeChoice").on('change', function () {
+                    $("input[name='spi_1_go']").click();
+                }
+                );
+            </script><INPUT TYPE=hidden NAME=di_1_omX VALUE="Last Year">
+            <INPUT TYPE=hidden NAME=" VALUE=" This Year">
+            <INPUT TYPE=hidden NAME=" VALUE=" Last Month">
+            <INPUT TYPE=hidden NAME=" VALUE=" This Month">
+            <INPUT TYPE=hidden NAME=" VALUE=" Last Week">
+            <INPUT TYPE=hidden NAME=" VALUE=" This Week">
+
+            <select name=son_omX class="form-control border-success" size=1>
+                <option>Last Year
+                <option>This Year
+                <option selected>Last Month
+                <option>This Month
+                <option>Last Week
+                <option>This Week
+            </select>
+        </div>
+        <div id="vo_gopb" style="display:none;"><input type=submit size=2 name=spi_1_go value="GO"><input type=hidden
+                name=i_1_go value="GO">
+        </div>
+
+        <p class="card-text text-center"></p>
+        <p class="card-text text-center">Last&nbsp;Month<INPUT TYPE=hidden NAME=i_1_DateRange VALUE="Last Month">
+        </p>
+        <p class="card-text text-center">$52,111.17<INPUT TYPE=hidden NAME=i_1_TotalExpenses VALUE="$52,111.17">
+        </p>
+
+        <!--    <canvas id="pieChart"></canvas>
+    <script src="pieChart.js"></script> -->
+</body>
+</form>
+
+</html>
